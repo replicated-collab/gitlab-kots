@@ -1,0 +1,26 @@
+apiVersion: kots.io/v1beta1
+kind: HelmChart
+metadata:
+  name: gitlab
+spec:
+  # chart identifies a matching chart from a .tgz
+  chart:
+    name: gitlab
+    chartVersion: 3.0.4
+
+  # values are used in the customer environment, as a pre-render step
+  # these values will be supplied to helm template
+  values: 
+    certmanager:
+      createCustomResource: false
+      install: false
+    certmanager-issuer:
+  ## The email address to register certificates requested from Let's Encrypt.
+  ## Required if using Let's Encrypt.
+      email: david+gitlab@replicated.com
+
+
+  # builder values provide a way to render the chart with all images
+  # and manifests. this is used in replicated to create airgap packages
+  builder: {}
+  
