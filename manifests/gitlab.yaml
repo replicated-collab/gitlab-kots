@@ -18,6 +18,8 @@ spec:
   ## The email address to register certificates requested from Let's Encrypt.
   ## Required if using Let's Encrypt.
       email: david+gitlab@replicated.com
+    hosts:
+      domain: repl{{ ConfigOption "gitlab_domain" }}
 
 
   # builder values provide a way to render the chart with all images

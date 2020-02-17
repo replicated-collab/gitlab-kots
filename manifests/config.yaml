@@ -1,0 +1,14 @@
+apiVersion: kots.io/v1beta1
+kind: Config
+metadata:
+  name: gitlab
+spec:
+  groups:
+    - name: gitlab-settings
+      title: Gitlab Settings
+      description: Settings for Gitlab
+      items:
+        - name: gitlab_domain
+          title: Domain for Gitlab
+          type: text
+          required: true
