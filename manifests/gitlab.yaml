@@ -20,6 +20,8 @@ spec:
       email: david+gitlab@replicated.com
     hosts:
       domain: repl{{ ConfigOption "gitlab_domain" }}
+    ingress:
+      configureCertmanager: false
 
 
   # builder values provide a way to render the chart with all images
