@@ -4,12 +4,12 @@ kind: Application
 metadata:
   name: myapp-enterprise
 spec:
-  title: My Great App
-  icon: https://image.flaticon.com/icons/svg/199/199594.svg
+  title: Gitlab Enterprise
+  icon: https://about.gitlab.com/ico/apple-touch-icon-144x144.png
   releaseNotes: |
-    This is a great new version of my app!
+    Icon and application URL changed
   ports:
-    - serviceName: "example-nginx"
-      servicePort: 80
-      localPort: 80
-      applicationUrl: "http://example-nginx"
+    - serviceName: "gitlab-nginx-ingress-controller"
+      servicePort: 443
+      localPort: 443
+      applicationUrl: "http://gitlab.materiography.com"
