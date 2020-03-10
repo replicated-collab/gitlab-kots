@@ -1,0 +1,17 @@
+apiVersion: troubleshoot.replicated.com/v1beta1
+kind: Analyzer
+metadata:
+  name: analyzer
+spec:
+  analyzers:
+    - nodeResources:
+        checkName: Must have at least 3 nodes in the cluster
+        outcomes:
+          - fail:
+              when: "count() < 3"
+              message: This application requires at least 3 nodes
+          - warn:
+              when: "count() < 5"
+              message: This application recommends at last 5 nodes.
+          - pass:
+              message: This cluster has enough nodes.
