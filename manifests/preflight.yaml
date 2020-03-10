@@ -16,3 +16,14 @@ spec:
               uri: https://kubernetes.io
           - pass:
               message: Your cluster meets the recommended and required versions of Kubernetes.
+    - nodeResources:
+            checkName: Cluster Node Count
+            outcomes:
+              - fail:
+                  when: "count() < 3"
+                  message: This application requires at least 3 nodes
+              - warn:
+                  when: "count() < 5"
+                  message: This application recommends at last 5 nodes.
+              - pass:
+                  message: This cluster has enough nodes.

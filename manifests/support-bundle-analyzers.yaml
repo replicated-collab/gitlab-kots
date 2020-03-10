@@ -5,7 +5,7 @@ metadata:
 spec:
   analyzers:
     - nodeResources:
-        checkName: Must have at least 3 nodes in the cluster
+        checkName: Cluster Node Count
         outcomes:
           - fail:
               when: "count() < 3"
