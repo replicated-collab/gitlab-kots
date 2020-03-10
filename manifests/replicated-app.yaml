@@ -13,3 +13,18 @@ spec:
       servicePort: 443
       localPort: 443
       applicationUrl: "http://gitlab.materiography.com"
+    statusInformers:
+      - deployment/gitlab-gitlab-exporter
+      - deployment/gitlab-gitlab-runner
+      - deployment/gitlab-gitlab-shell
+      - deployment/gitlab-minio
+      - deployment/gitlab-nginx-ingress-controller
+      - deployment/gitlab-nginx-ingress-default-backend
+      - deployment/gitlab-prometheus-server
+      - deployment/gitlab-registry
+      - deployment/gitlab-sidekiq-all-in-1-v1
+      - deployment/gitlab-task-runner
+      - deployment/gitlab-unicorn
+      - statefulset/gitlab-gitaly
+      - statefulset/gitlab-postgresql
+      - statefulset/gitlab-redis-master
