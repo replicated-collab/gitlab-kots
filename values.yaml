@@ -1,4 +1,4 @@
-# Default values for gitlab/gitlab chart
+# Default values for gitlab/gitlab chart, added here for reference
 
 ## NOTICE
 # Due to the scope and complexity of this chart, all possible values are
